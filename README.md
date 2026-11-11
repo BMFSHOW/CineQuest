@@ -74,7 +74,8 @@ Meta doesn't offer an official way for apps to record in Cinematic. CineQuest ge
 **Network and privacy:**
 
 - There are no accounts, ads or analytics, and CineQuest doesn't upload your clips or data to any online service.
-- The only internet download is Google's platform-tools during PC setup.
+- Both apps check this GitHub page for new releases: the PC app when it starts, when you open its window and once a day; the headset app when you open its window. Like visiting any website, that shares your IP address with GitHub. Nothing else is sent.
+- The only downloads are Google's platform-tools during PC setup, and an update when you press **Update**.
 - The PC app copies clips directly over your local network. It pairs with a 6-digit code and uses a token after that, but **the connection isn't encrypted (plain HTTP)**, so use it on a network you trust.
 - Developer Mode and debugging access make any headset less locked down. Only devices you've approved can connect over ADB, but if that trade-off doesn't suit you, CineQuest isn't for you.
 
@@ -90,6 +91,17 @@ CineQuest is an early, pre-1.0 personal project.
 
 Please update to the latest release. Versions before 0.3.1 could freeze the headset when recording with the CineQuest window open.
 
+## Updating
+
+From 0.3.2, CineQuest updates itself:
+
+- **Headset:** when you open CineQuest and a new version is out, it shows what's new. Press **Update** and it downloads, installs and reopens by itself. If you're recording, it waits until you stop.
+- **PC:** the PC app tells you when a new version is out. Press **Update** and it replaces itself and restarts.
+- Each app also tells you when the other one is behind.
+- Nothing installs without you pressing **Update**. Downloads are checked against the release's checksum, and the headset only accepts updates signed with CineQuest's own key.
+
+**On 0.3.1 or earlier?** Those versions can't update themselves. Plug in your headset and run the latest [`CineQuest-Setup.exe`](https://github.com/BMFSHOW/CineQuest/releases/latest/download/CineQuest-Setup.exe) once. Your settings and recordings are kept.
+
 ## Source code
 
 CineQuest isn't open source right now. This repository hosts the downloads, documentation and bug reports. Source may be released once the app reaches 1.0, but that isn't a promise.
@@ -101,7 +113,7 @@ CineQuest isn't open source right now. This repository hosts the downloads, docu
 
 ## Bugs and questions
 
-[Open an issue](https://github.com/BMFSHOW/CineQuest/issues/new/choose) and include your CineQuest version and what you pressed. Most questions are answered in the [FAQ](https://cinequest.bmfvr.com/#faq).
+[Open an issue](https://github.com/BMFSHOW/CineQuest/issues/new/choose) and include your CineQuest version and what you pressed. On 0.3.2 or later, press **Copy diagnostics** (in the PC app, or on the headset's Setup tab) and paste it into the issue: it shows the version, connection state and recent errors. Most questions are answered in the [FAQ](https://cinequest.bmfvr.com/#faq).
 
 ## Legal
 
